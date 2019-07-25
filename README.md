@@ -1,7 +1,10 @@
 
  ## ContactBook Application
 
- - git clone
+ - git clone https://github.com/Volocuga/contactBook.git
+ 
  - cd contact-book
+ 
  - yarn install
+ 
  - yarn start
