@@ -1,7 +1,7 @@
 
  ## ContactBook Application
 
-### `git clone`
-### `cd contact-book`
-### `yarn install`
-### `yarn start`
+ - git clone
+ - cd contact-book
+ - yarn install
+ - yarn start
