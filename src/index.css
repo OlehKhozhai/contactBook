@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.App {
+  width: 100vw;
+  padding-top: 50px;
+}
+
+.contact_list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 80vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.contact_item {
+  min-height: 160px;
+  width: 23%;
+  margin: 0 2.6% 25px 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ececec;
+  padding: 20px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.contact_item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.contact_item > h4 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.contact_item > p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact_item > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.add_contact_btn {
+  display: block;
+  width: 40%;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffce64;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+
+.add_contact_btn:focus {
+  animation: animate-btn 1.4s ease-in;
+}
+
+.modal_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 700px;
+}
+
+.modal_body {
+  min-height: 300px;
+  padding: 30px 45px 50px;
+  background-color: #fff;
+  border-radius: 6px;
+  animation: scale_modal 1.5s alternate;
+}
+
+.contact_img {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 90px;
+}
+
+.group_input {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.group_input > label {
+  display: inline-block;
+  min-width: 130px;
+}
+
+.group_input > input {
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  height: 35px;
+  margin-left: 20px;
+  padding: 0 22px;
+  font-size: 18px;
+}
+
+.input_block label input:focus {
+  outline-width: 0;
+  border-bottom: 1px solid;
+}
+
+.error_message {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: red;
+  font-size: 12px;
+}
+
+@keyframes scale_modal {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate-btn {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+
+.modal-exit {
+  opacity: 1;
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.modal_body-exit {
+  transform: scale(1);
+}
+
+.modal_body-exit-active {
+  transform: scale(0.8);
+  transition: transform 500ms;
+}
